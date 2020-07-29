@@ -1,0 +1,64 @@
+#sideNav {
+  .navbar-nav .nav-item .nav-link {
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+  }
+  .navbar-toggler {
+    &:focus {
+      
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: $sidebar-base-width;
+    height: 100vh;
+    .navbar-brand {
+      display: flex;
+
+      margin: auto auto 0;
+      padding: 0.5rem;
+      .img-profile {
+        width: 200px;
+        height: 210px;
+	border-radius: 100px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat, no-repeat;
+	-moz-box-shadow: inset 0 0 20px #636161;
+	-webkit-box-shadow: inset 0 0 20px white;
+	box-shadow : inset 0 0 40px white;
+        border: 0.6rem solid fade-out($white, 1);
+      }
+    }
+    .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+
+      width: 100%;
+      margin-bottom: auto;
+      .navbar-nav {
+        flex-direction: column;
+
+        width: 100%;
+        .nav-item {
+          display: block;
+          .nav-link {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
